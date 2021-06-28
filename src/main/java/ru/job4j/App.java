@@ -1,7 +1,7 @@
 package ru.job4j;
 
 public class App {
-    public static void main(String[] args) {
-        System.out.println("5");
+    public int calc(int a, int b) {
+        return a + b;
     }
 }
