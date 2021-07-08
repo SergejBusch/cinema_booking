@@ -1,0 +1,200 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #050028;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.seat-container {
+    justify-items: center;
+    justify-content: center;
+    background-color: #1B163E;
+    display: grid;
+    grid-template: repeat(12, 50px) / repeat(10, 50px);
+    grid-gap: 10px;
+    padding: 40px;
+    max-width: 650px;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.is-invisible {
+    /*transform: rotateY(180deg);*/
+    filter: blur(30px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.is-visible {
+    opacity: 100;
+    visibility: visible;
+}
+
+.box {
+    background-color: #1B163E;
+    border: 3px solid #38345B;
+    color: #B0ACCD;
+    border-radius: 5px;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    justify-self: center;
+    align-self: center;
+    transition: all .2s ease-in-out;
+}
+
+.box.purchased {
+    background-color: #FD4B62;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: not-allowed;
+}
+
+.checked-box {
+    background-color: #1B163E;
+    border: 3px solid #9792ba;
+    color: #B0ACCD;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    justify-self: center;
+    align-self: center;
+    line-height: 50px;
+    transition: all 1s;
+}
+
+.header {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.proceed-btn {
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    width: auto;
+    padding: 0 20px 0 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: #d9d6e5;
+    color: #1B163E;
+    outline: none;
+    border: none;
+}
+
+.price {
+    height: 20px;
+    color: #B0ACCD;
+    transition: all 1s;
+}
+
+.bay-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    top: 303px;
+    color: #B0ACCD;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.z-index-negative {
+    z-index: -1;
+}
+
+.z-index-positive {
+    z-index: 1;
+}
+
+.info-child {
+    margin: 10px;
+}
+
+.session-label {
+    color: #d9d6e5;
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+select {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #d9d6e5;
+    appearance: none;
+    padding: .6em 1.4em .5em .8em;
+    box-sizing: border-box;
+    width: 10%;
+    border: 1px solid #aaa;
+    border-radius: .5em;
+    background-color: transparent;
+    border: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font-family: inherit;
+    cursor: inherit;
+    line-height: 40px;
+}
+
+.select-css:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+
+
+
