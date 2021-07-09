@@ -15,3 +15,12 @@ CREATE TABLE ticket (
 
 CREATE UNIQUE INDEX idx_cinema_seat
     ON ticket(session_id, row, cell);
+
+ALTER TABLE IF EXISTS ticket
+    RENAME TO ticker;
+
+ALTER TABLE ticker
+    RENAME COLUMN cell TO columnn;
+
+ALTER TABLE ticker
+    ADD CONSTRAINT const UNIQUE (session_id, row, columnn);
